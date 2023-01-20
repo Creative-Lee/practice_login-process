@@ -1,3 +1,5 @@
+import { login } from './apis/login.js';
+
 const mainForm = document.querySelector('.form__wrap');
 
 mainForm?.addEventListener('submit', (e) => {
@@ -5,4 +7,6 @@ mainForm?.addEventListener('submit', (e) => {
 
   const email = (document.querySelector('.email-input') as HTMLInputElement).value;
   const password = (document.querySelector('.password-input') as HTMLInputElement).value;
+
+  login(email, password);
 });
