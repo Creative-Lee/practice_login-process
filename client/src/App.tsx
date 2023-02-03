@@ -1,15 +1,13 @@
+import { Route, Routes } from 'react-router-dom';
+import { LoginForm, NavMenu } from './pages';
+import '../index.scss';
+
 function App() {
   return (
-    <div className="App">
-      <nav className="nav">
-        <a href="/" className="nav_item" data-link>
-          <span>home</span>
-        </a>
-        <a href="/posts" className="nav_item" data-link>
-          <span>login</span>
-        </a>
-      </nav>
-    </div>
+    <Routes>
+      <Route path="/" element={<NavMenu />} />
+      <Route path="/login" element={<LoginForm />} />
+    </Routes>
   );
 }
 
