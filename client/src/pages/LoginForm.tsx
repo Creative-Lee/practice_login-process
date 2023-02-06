@@ -1,5 +1,6 @@
 import { Form, Button } from 'react-bootstrap';
 import { useState } from 'react';
+import { login } from '../apis/login';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
@@ -7,6 +8,7 @@ const LoginForm = () => {
 
   const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    login(email, password);
   };
 
   return (
